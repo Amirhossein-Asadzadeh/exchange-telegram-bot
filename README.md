@@ -53,16 +53,16 @@ This makes the core logic:
 An alert is triggered **only when all conditions are met**:
 
 - PnL crosses between **negative ↔ positive**
-- Absolute PnL change exceeds the configured threshold
+- Absolute PnL exceeds the configured threshold
 - Cooldown window has elapsed since the last alert
 
 ### Examples
 
-| PnL Change        | Alert |
-|------------------|-------|
-| `-300 → -400`     | ❌ No |
-| `+10 → -10`       | ✅ Yes |
-| `-5 → +5`         | ✅ Yes |
+| PnL Change | Alert |
+|-----------|-------|
+| `-300 → -400` | ❌ No |
+| `+10 → -10` | ✅ Yes |
+| `-5 → +5` | ✅ Yes |
 | Repeated crossing during cooldown | ❌ No |
 
 ---
@@ -86,16 +86,16 @@ bash
 Copy code
 pip install -e .
 python -m posbot.main
-Commands (Telegram)
-/positions – Show open positions
+Telegram Commands
+/positions — Show open positions
 
-/status – Show current watcher state
+/status — Show current watcher state
 
-/threshold <value> – Set PnL sensitivity
+/threshold <value> — Set PnL sensitivity
 
-/cooldown <seconds> – Set alert cooldown
+/cooldown <seconds> — Set alert cooldown
 
-/watch on|off – Enable / disable monitoring
+/watch on|off — Enable / disable monitoring
 
 Tests
 All critical logic is covered with unit tests.
