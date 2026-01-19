@@ -19,3 +19,5 @@ logs/
 
 # OS
 desktop.ini
+
+*.egg-info/
