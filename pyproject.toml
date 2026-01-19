@@ -1,0 +1,39 @@
+[project]
+name = "exchange-telegram-bot"
+version = "0.1.0"
+description = "Telegram bot + watcher for crypto futures positions (event-only alerts)."
+requires-python = ">=3.11"
+dependencies = [
+  "python-telegram-bot>=21.0,<22.0",
+  "pydantic>=2.6,<3.0",
+  "pydantic-settings>=2.2,<3.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "ruff>=0.6",
+  "mypy>=1.10",
+  "pytest>=8.0",
+  "types-requests",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["src"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = []
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+no_implicit_optional = true
+strict_optional = true
+mypy_path = "src"
+
+[project.scripts]
+posbot = "posbot.main:main"

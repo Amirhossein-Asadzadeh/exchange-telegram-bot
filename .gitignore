@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual env
+.venv/
+
+# Env
+.env
+
+# Runtime state
+state.json
+logs/
+
+# Pytest
+.pytest_cache/
+
+# OS
+desktop.ini
