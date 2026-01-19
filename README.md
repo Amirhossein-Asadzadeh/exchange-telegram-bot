@@ -1,3 +1,5 @@
+![CI](https://github.com/Amirhossein-Asadzadeh/exchange-telegram-bot/actions/workflows/ci.yml/badge.svg)
+
 # Exchange Telegram Bot (PnL Watcher)
 
 Telegram bot for monitoring futures positions and notifying **Profit ↔ Loss crossings** with cooldown protection.
